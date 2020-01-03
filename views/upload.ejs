@@ -1,0 +1,39 @@
+<% include ./partials/header%>
+<%include ./partials/navbar %>
+
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+               
+                <div class="form-group">
+                    <label for="user">Select User</label>
+                    <select class="form-control" name="user" id="user">
+                    <%users.forEach((user)=>{%>
+                    
+                    <option value="<%=user._id%>"><%=user.username%></option>   
+                   
+                    <%});%>
+                    </select>
+                </div>
+                
+                <div class="custom-file">
+                        <input type="file" name="card" class="custom-file-input" id="validatedCustomFile" required>
+                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                        <div class="invalid-feedback">Invalid custom file feedback</div>
+                    </div>
+                <hr>
+                
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </form> 
+        </div>
+
+
+    </div>
+
+</div>
+
+<% include ./partials/footer %>

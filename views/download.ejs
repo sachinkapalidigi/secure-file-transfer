@@ -1,0 +1,57 @@
+<% include ./partials/header%>
+<%include ./partials/navbar %>
+
+
+
+<div class="container">
+
+    <div class="row">
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">From</th>
+                <th scope="col">Key</th>
+                <th scope="col">Button</th>
+              </tr>
+            </thead>
+            <tbody>
+                <%user.files.forEach((file)=>{%>
+                <form action="/download" method="post">
+                <tr>
+                <th scope="row"><input type="text" name="id" value="<%=file._id%>" hidden><%=file._id%></th>
+                <td><%=file.from%></td>
+                <td><textarea name="key" id="" cols="30" rows="10"></textarea></td>
+                <td><input class="btn btn-sm btn-primary" type="submit" value="Get File"></td>             
+            
+                </tr>
+                </form>
+                <%});%>
+            </tbody>
+          </table>
+
+
+
+
+
+    </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<% include ./partials/footer %>
