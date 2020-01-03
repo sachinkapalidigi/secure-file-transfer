@@ -17,7 +17,7 @@
     "express-session": "^1.15.6",
     "file-encryptor": "^0.1.1",
     "method-override": "^3.0.0",
-    "mongoose": "^5.4.15",
+    "mongoose": "^5.7.5",
     "multer": "^1.4.1",
     "node-rsa": "^1.0.3",
     "passport": "^0.4.0",
